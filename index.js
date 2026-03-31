@@ -4,7 +4,7 @@ const games = [
     { name: "GTA San Andreas", type: "APK", img: "https://files.catbox.moe/12ca6e.jpg", link: "#" },
     { name: "eFootball™ 2024", type: "APK", img: "https://files.catbox.moe/m07l3s.jpg", link: "#" },
     { name: "Mortal Kombat 11", type: "APK", img: "https://files.catbox.moe/rwrr3c.jpg", link: "#" },
-    { name: "God of War", type: "PSP", img: "https://via.placeholder.com/400x250?text=GOW", link: "#" },
+    { name: "FIFA 2026™", type: "PSP", img: "https://files.catbox.moe/vgsx20.jpg", link: "#" },
     { name: "Spider-Man", type: "APK", img: "https://via.placeholder.com/400x250?text=Spider-Man", link: "#" }
     // Ongeza mengine hapa chini...
 ];
