@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>jampani Gaming TZ | Official Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00d2ff;
+            --secondary: #e94560;
+            --bg: #050a18;
+            --font-game: 'Orbitron', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #fff;
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0; padding: 0;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* --- BACKGROUND ANIMATION --- */
+        .area { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; background: #050a18; }
+        .circles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; margin: 0; padding: 0; }
+        .circles li { position: absolute; list-style: none; background: rgba(255, 255, 255, 0.03); animation: animate 25s linear infinite; bottom: -150px; display: flex; align-items: center; justify-content: center; color: rgba(255, 255, 255, 0.08); font-family: var(--font-game); }
+        .circles li:nth-child(1){ left: 25%; width: 60px; height: 60px; content: 'X'; }
+        .circles li:nth-child(2){ left: 10%; animation-duration: 12s; }
+        .circles li:nth-child(3){ left: 70%; width: 25px; height: 25px; }
+        @keyframes animate { 0% { transform: translateY(0) rotate(0deg); opacity: 1; } 100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; } }
+
+        /* --- HEADER & SEARCH --- */
+        header { text-align: center; padding: 40px 15px 20px; }
+        header h1 { font-family: var(--font-game); color: var(--primary); font-size: 1.8rem; letter-spacing: 3px; text-shadow: 0 0 15px rgba(0,210,255,0.5); margin: 0; }
+        
+        .search-box { max-width: 90%; margin: 0 auto 30px; }
+        #searchInput { width: 100%; padding: 12px 20px; border-radius: 8px; border: 1px solid var(--primary); background: rgba(0,0,0,0.7); color: var(--primary); outline: none; font-family: inherit; box-sizing: border-box; }
+
+        /* --- GAMES GRID --- */
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; max-width: 1200px; margin: 0 auto; padding: 0 15px 40px; }
+        .card { background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(8px); border-radius: 12px; padding: 12px; text-align: center; transition: 0.4s; }
+        .card:hover { transform: translateY(-5px); border-color: var(--primary); box-shadow: 0 5px 20px rgba(0, 210, 255, 0.2); }
+        .card img { width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 10px; }
+        .download-btn { display: block; width: 100%; padding: 10px 0; background: linear-gradient(45deg, var(--primary), #00a2ff); color: #000; font-family: var(--font-game); font-weight: 700; text-decoration: none; border-radius: 6px; font-size: 0.8rem; box-sizing: border-box; }
+
+        /* --- SOCIAL MEDIA SECTION --- */
+        .social-container {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 30px 15px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .social-container h4 { font-family: var(--font-game); font-size: 0.9rem; margin-bottom: 20px; color: var(--primary); letter-spacing: 2px; }
+        .social-icons { display: flex; justify-content: center; flex-wrap: wrap; gap: 20px; }
+        .social-icons a { 
+            font-size: 1.5rem; color: #fff; text-decoration: none; transition: 0.3s; 
+            width: 45px; height: 45px; display: flex; align-items: center; justify-content: center;
+            border-radius: 50%; background: rgba(255, 255, 255, 0.05);
+        }
+        
+        /* Rangi za kila social media wakati wa kuguza (Hover) */
+        .social-icons a:hover { transform: scale(1.2) translateY(-5px); }
+        .fa-whatsapp:hover { color: #25d366; box-shadow: 0 0 15px #25d366; }
+        .fa-youtube:hover { color: #ff0000; box-shadow: 0 0 15px #ff0000; }
+        .fa-tiktok:hover { color: #ff0050; box-shadow: 0 0 15px #ff0050; }
+        .fa-instagram:hover { color: #e1306c; box-shadow: 0 0 15px #e1306c; }
+        .fa-facebook:hover { color: #1877f2; box-shadow: 0 0 15px #1877f2; }
+        .fa-twitter:hover { color: #1da1f2; box-shadow: 0 0 15px #1da1f2; }
+        .fa-twitch:hover { color: #9146ff; box-shadow: 0 0 15px #9146ff; }
+
+        footer { text-align: center; padding: 20px; opacity: 0.4; font-size: 0.7rem; }
+
+        @media (min-width: 600px) {
+            header h1 { font-size: 3rem; }
+            .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+            .card img { height: 180px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="area">
+        <ul class="circles">
+            <li>X</li><li>O</li><li>Δ</li><li>□</li><li>X</li>
+            <li>O</li><li>Δ</li><li>□</li><li>X</li><li>O</li>
+        </ul>
+    </div>
+
+    <header>
+        <h1>JAMPANI GAMING TZ</h1>
+        <p>Premium Android & PSP Games</p>
+    </header>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="TAFUTA GAME..." onkeyup="search()">
+    </div>
+
+    <div class="grid" id="gameGrid"></div>
+
+    <div class="social-container">
+        <h4>TUFuate Mitandaoni</h4>
+        <div class="social-icons">
+            <a href="https://wa.me/255674229015" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com/@JAMPANI-TZ" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@jampan47?_r=1&_d=f23b2hi005d6ci&sec_uid=MS4wLjABAAAAb4bnqYFKtDh1_3Ilg2LaAHDzybPFOZXUGKvJJTHA_vQFNaIwZp0xlscCPtF19nbR&share_author_id=7391016891857142790&sharer_language=en&source=h5_m&u_code=ef61gh6kdhdb09&timestamp=1774986288&user_id=7391016891857142790&sec_user_id=MS4wLjABAAAAb4bnqYFKtDh1_3Ilg2LaAHDzybPFOZXUGKvJJTHA_vQFNaIwZp0xlscCPtF19nbR&item_author_type=1&utm_source=copy&utm_campaign=client_share&utm_medium=android&share_iid=7607695699836978965&share_link_id=a8517378-008c-44e2-a048-a73fd9c60a2c&share_app_id=1233&ugbiz_name=ACCOUNT&ug_btm=b8727%2Cb7360&social_share_type=5&enable_checksum=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/kelvin.jampan?igsh=MWVvNG1zdnlsY284ZA==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/share/1NniozvvfS/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/kelvinjamp71721" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.twitch.com/jampan47" target="_blank"><i class="fab fa-twitch"></i></a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 JAMPANI GAMING TZ</p>
+    </footer>
+
+    <script>
+        const games = [
+            { name: "Downhill Domination", type: "PSP", img: "https://images.unsplash.com/photo-1544652478-6653e09f18a2?q=80&w=400", link: "#" },
+            { name: "FIFA Mobile 24", type: "Android", img: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=400", link: "#" },
+            { name: "God of War", type: "PSP", img: "https://images.unsplash.com/photo-1580234811497-9df7fd2f357e?q=80&w=400", link: "#" }
+        ];
+
+        function showGames(data) {
+            const grid = document.getElementById('gameGrid');
+            grid.innerHTML = data.map(g => `
+                <div class="card">
+                    <img src="${g.img}" alt="${g.name}">
+                    <div style="color:var(--primary); font-size:11px; font-family:var(--font-game); margin-bottom:5px;">${g.type}</div>
+                    <h3 style="margin:0 0 10px; font-size:1rem;">${g.name}</h3>
+                    <a href="${g.link}" target="_blank" class="download-btn">Download</a>
+                </div>
+            `).join('');
+        }
+
+        function search() {
+            const val = document.getElementById('searchInput').value.toLowerCase();
+            showGames(games.filter(g => g.name.toLowerCase().includes(val)));
+        }
+
+        window.onload = () => showGames(games);
+    </script>
+</body>
+</html>
