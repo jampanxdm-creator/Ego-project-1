@@ -5,7 +5,7 @@ const games = [
     { name: "eFootball™ 2024", type: "APK", img: "https://files.catbox.moe/m07l3s.jpg", link: "#" },
     { name: "Mortal Kombat 11", type: "APK", img: "https://files.catbox.moe/rwrr3c.jpg", link: "#" },
     { name: "FIFA 2026™", type: "PSP", img: "https://files.catbox.moe/vgsx20.jpg", link: "#" },
-    { name: "Spider-Man", type: "APK", img: "https://via.placeholder.com/400x250?text=Spider-Man", link: "#" }
+    { name: "INJUSTICE®", type: "APK", img: "https://files.catbox.moe/73ff6m.jpg", link: "#" }
     // Ongeza mengine hapa chini...
 ];
 
