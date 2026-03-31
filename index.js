@@ -35,3 +35,25 @@ function search() {
 
 // Hii inahakikisha games zinaonekana page ikifunguka
 window.onload = () => showGames(games);
+// Akili ya kufanya kadi zitokee unapo-scroll (Scroll Reveal)
+function reveal() {
+    var cards = document.querySelectorAll(".card");
+    for (var i = 0; i < cards.length; i++) {
+        var windowHeight = window.innerHeight;
+        var elementTop = cards[i].getBoundingClientRect().top;
+        var elementVisible = 100;
+        if (elementTop < windowHeight - elementVisible) {
+            cards[i].classList.add("show");
+        }
+    }
+}
+
+// Inasikiliza kila unaposcroll
+window.addEventListener("scroll", reveal);
+
+// Inahakikisha hata games za juu zinaonekana ukifungua tu page
+window.onload = () => {
+    showGames(games);
+    setTimeout(reveal, 200); // Inachelewa kidogo ili grid iwe imejengeka
+};
+
